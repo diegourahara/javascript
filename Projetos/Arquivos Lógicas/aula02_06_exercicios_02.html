@@ -14,19 +14,23 @@
 
         var j2 = parseInt(prompt('Jogador 2, digite um número:'));
 
+        var digitados = 'Número do jogador 1: ' + j1 + '\nNúmero do jogador 2: ' + j2;
+
         if (j1 === j2) {
-            alert('Empate!');
+            alert(digitados);
+            alert('Empatou!');
         } else {
             var sorteado = parseInt(Math.random() * 2);
-            alert("Número sorteado: " + sorteado);
-
-            if ((j1 < j2 && sorteado === 0) || (j1 > j2 && sorteado === 1)) {
+            alert('Número sorteado: ' + sorteado);
+            
+            if ((sorteado === 0 && j1 < j2) || sorteado === 1 && j1 > j2) {
+                alert(digitados);
                 alert('Jogador 1 ganhou!');
             } else {
+                alert(digitados);
                 alert('Jogador 2 ganhou!');
             }
         }
-
 
     </script>
 </body>

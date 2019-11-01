@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Lógica de programação Javascript</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+    <script>
+
+        var nome = prompt('Digite o seu nome');
+        var comprimento = nome.length;
+
+        switch (comprimento) {
+            case 1:
+                alert('Yo!');
+                break;
+            case 2:
+                alert('Xii!');
+                break;
+            case 3:
+                alert('Mano...');
+                break;
+            default:
+                alert('Maior que 3.');
+        }
+
+        var numero = parseInt(prompt('Digite um número: '));
+
+        switch (numero) {
+            case 1:
+                alert('É string!!!')
+                break;
+            case 2:
+                alert('É número!!!');
+                break;
+            default:
+                break;
+        }
+
+        var num = 10;
+
+        switch (typeof num) {
+            case 'number':
+                alert('É número.');
+                break;
+            case 'string':
+                alert('É string.');
+            default:
+                break;
+        }
+
+    </script>
+</body>
+
+</html>
