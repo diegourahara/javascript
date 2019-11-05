@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Lógica de programação Javascript</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+
+    <button onclick="criar()">Criar Tabuada</button>
+    <button onclick="limpar()">Limpar Tabuada</button>
+
+    <div id="saida"></div>
+
+</body>
+
+<script>
+
+    var mensagem = "";
+    var saida = document.querySelector("#saida");
+
+    function criar() {
+        var n = parseInt(prompt("Digite um número para a tabuada:"));
+        var q = parseInt(prompt("Digite um número até o qual pretende que a tabuada seja executada:"));
+
+        limpar();
+
+        for (let i = 1; i <= q; i++) {
+            mensagem += n + " x " + i + " = " + (n * i) + "<br>";
+        }
+
+        saida.innerHTML = mensagem;
+    }
+
+    function limpar() {
+        mensagem = "";
+        saida.innerHTML = mensagem;
+    }
+
+</script>
+
+</html>
