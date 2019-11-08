@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Lógica de programação Javascript</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+
+    <button onclick="calular('+')">+</button>
+    <button onclick="calular('-')">-</button>
+    <button onclick="calular('*')">*</button>
+    <button onclick="calular('/')">/</button>
+
+    <div id="saida"></div>
+</body>
+
+<script>
+
+    var n1 = parseFloat(prompt('Digite um número:'));
+
+    escreve();
+
+    function escreve() {
+        var saida = document.querySelector('#saida');
+        saida.innerHTML = n1;
+    }
+
+    function calular(simbolo) {
+        var n2 = parseFloat(prompt('Digite outro número:'));
+
+        switch (simbolo) {
+            case '+':
+                n1 += n2;
+                break;
+            case '-':
+                n1 -= n2;
+                break;
+
+            case '*':
+                n1 *= n2;
+                break;
+
+            case '/':
+                n1 /= n2;
+                break;
+
+            default:
+                break;
+        }
+
+        escreve();
+    }
+
+</script>
+
+</html>

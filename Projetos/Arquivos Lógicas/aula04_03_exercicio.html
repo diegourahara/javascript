@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Lógica de programação Javascript</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+
+    <button onclick="iniciarCalculo('+')">+</button>
+    <button onclick="iniciarCalculo('-')">-</button>
+    <button onclick="iniciarCalculo('*')">*</button>
+    <button onclick="iniciarCalculo('/')">/</button>
+
+    <div id="output"></div>
+</body>
+
+<script>
+    var n = parseFloat(prompt('Digite um número:'));
+
+    escreve(n);
+
+    function iniciarCalculo(simbolo) {
+        var n1 = document.querySelector('#output').textContent;
+        n1 = parseFloat(n1);
+
+        var n2 = parseFloat(prompt('Digite outro número:'));
+
+        var msg = calcular(simbolo, n1, n2);
+
+        escreve(msg);
+    }
+
+    function escreve(mensagem) {
+        var output = document.querySelector('#output').innerHTML = mensagem;
+    }
+
+    function calcular(simbolo, n1, n2) {
+        if (simbolo !== '+' || simbolo !== '-' || simbolo !== '*' || simbolo !== '/') {
+            alert('Digite um símbolo válido.');
+
+            return 0;
+        }
+
+        if (isNaN(n1) || isNaN(n2)) {
+            alert('Digite apenas números.');
+
+            return 0;
+        }
+
+        var numeroCalculado = null;
+
+        if (simbolo == '+') {
+            numeroCalculado = n1 + n2;
+        } else if (simbolo == '-') {
+            numeroCalculado = n1 - n2;
+        } else if (simbolo == '*') {
+            numeroCalculado = n1 * n2;
+        } else if (simbolo == '/') {
+            numeroCalculado = n1 / n2;
+        }
+
+        return numeroCalculado;
+    }
+
+</script>
+
+</html>
