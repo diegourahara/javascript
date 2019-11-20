@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Lógica de programação Javascript</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+
+</body>
+
+<script>
+
+    function dizOla(paraQuem, cb) {
+        if (typeof cb === 'function') {
+            return cb(paraQuem);
+        }
+
+        return console.log('Olá ', paraQuem);
+    }
+
+    function boaTarde(paraQuem) {
+        console.log('Boa tarde ', paraQuem);
+    }
+
+    function boaNoite(paraQuem) {
+        console.log('Boa noite ', paraQuem);
+    }
+
+    dizOla('Maria');
+    dizOla('Anah', boaTarde);
+    dizOla('Jimmy', boaNoite);
+    dizOla('Mary', function (who) {
+        console.log('Bom dia ', who);
+    });
+
+</script>
+
+</html>

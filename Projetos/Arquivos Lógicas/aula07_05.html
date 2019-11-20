@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Lógica de programação Javascript</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+
+</body>
+
+<script>
+
+    function testeSalto() {
+        for (var i = 0; i < 10; i++) {
+            console.log(i);
+            if (i === 5) {
+                return 'fim da função';
+            }
+        }
+    }
+
+    var teste = testeSalto();
+
+    console.log(teste);
+
+    function testeSalto2() {
+        for (var i = 0; i < 10; i++) {
+
+            if (i === 5) {
+                continue;
+            }
+            console.log(i);
+        }
+        console.log('------');
+        return 'fim da função';
+    }
+
+    var teste2 = testeSalto2();
+
+    console.log(teste2);
+
+
+    function testeSalto3() {
+        for (var i = 0; i < 10; i++) {
+
+            if (i === 5) {
+                break;
+            }
+            console.log(i);
+        }
+        console.log('------');
+        return 'fim da função';
+    }
+
+    var teste3 = testeSalto3();
+
+    console.log(teste3);
+
+</script>
+
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Lógica de programação Javascript</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+    <div id="output"></div>
+</body>
+
+<script>
+
+    // Sintaxe formmal
+    var obj = new Object();
+    obj.nome = "meu objeto";
+    obj.funcao = function () {
+        console.log('eu sou o método do objeto');
+    }
+
+    console.log(obj.nome);
+    obj.funcao();
+
+    //Sintaxe literal
+    var obj2 = {
+        nome: "meu objeto 2",
+        funcao: function () {
+            console.log('eu sou o método do objeto 2')
+        }
+    }
+
+    console.log(obj2.nome);
+    obj2.funcao();
+
+    // Objetos customizados
+    var endereco1 = {
+        "logradoro": "rua tal",
+        "numero": 2
+    }
+
+    var endereco2 = {
+        "logradoro": "rua vez",
+        "numero": 4
+    }
+
+    var endereco3 = {
+        "logradoro": "Rua ou não",
+        "numero": 55
+    }
+
+    var minhaArray = new Array(1, 2, 3);
+    var hoje = new Date();
+    var obj3 = new Object();
+
+    function Endereco(logradoro, n, cep) {
+        this.logradoro = logradoro;
+        this.numero = n;
+        this.cep = cep;
+
+        this.enderecoCompleto = function () {
+            return this.logradoro + ', ' + this.n;
+        }
+    }
+
+    var endereco1 = new Endereco('rua j', 2, "32144-555");
+    var endereco2 = new Endereco('rua p', 11, "13547-774");
+
+    console.log('Endereço completo: ', endereco1.enderecoCompleto());
+
+</script>
+
+</html>

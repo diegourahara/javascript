@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Par ou ímpar</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Jogo do par ou ímpar</h1>
+    <p>Digite um número de 0 a 5
+        <input type="number" id="meuNumero" min="0" max="5"></p>
+    <label><input type="radio" name="opcao" value="par" checked>Par</label><br>
+    <label><input type="radio" name="opcao" value="impar">Ímpar</label><br><br>
+    <button onclick="jogar()">Jogar</button>
+
+</body>
+
+<script>
+
+    var nComputador = '';
+    var nJogador = '';
+    var minhaEscolha = '';
+
+    function sortearNumero(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    function jogar() {
+        nJogador = parseFloat(document.querySelector('#meuNumero').value);
+        nComputador = sortearNumero(5);
+        minhaEscolha = document.querySelector('input[type="radio"]:checked').value;
+        console.log('minhaEscolha', minhaEscolha);
+
+        if (!nJogador) {
+            return alert('Digite um número');
+        }
+
+        var total = nJogador + nComputador;
+
+        var resultado = (total % 2 === 0) ? 'par' : 'ímpar';
+
+        verificarResultado(resultado);
+    }
+
+    function verificarResultado(resultado) {
+        if (minhaEscolha === resultado) {
+            alert('Genhei!');
+        } else {
+            alert('Computador ganhou.');
+        }
+
+        console.log('nJogador', nJogador, typeof nJogador);
+        console.log('nComputador', nComputador, typeof nComputador);
+    }
+
+</script>
+
+</html>
