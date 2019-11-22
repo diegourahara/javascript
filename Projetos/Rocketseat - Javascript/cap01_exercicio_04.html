@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <script>
+        function experiencia(anos) {
+            if (anosEstudo <= 1) {
+                return 'Iniciante';
+            } else if (anosEstudo > 1 && anosEstudo <= 3) {
+                return 'Intermediário';
+            } else if (anosEstudo > 3 && anosEstudo <= 6) {
+                return 'Avançado';
+            } else {
+                return 'Mestre JEDI';
+            }
+        }
+
+        var anosEstudo = 8;
+        var aux = experiencia(anosEstudo);
+        console.log(aux);
+    </script>
+</body>
+
+</html>
